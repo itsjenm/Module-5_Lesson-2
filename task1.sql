@@ -1,9 +1,9 @@
-// Creates a database 
+// Creates a database //
 CREATE DATABASE Music;
 
 USE music;
 
-// Albums table
+// Albums table//
 CREATE TABLE Albums (
 	album_id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -15,13 +15,13 @@ CREATE TABLE Albums (
     FOREIGN KEY (genre_id) REFERENCES Genre(genre_id)
 );
 
-// Genre Table
+// Genre Table//
 CREATE TABLE Genre (
 	genre_id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL
 );
 
-// Artists Table
+// Artists Table//
 CREATE TABLE Artists (
 	artists_id INT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE Artists (
 );
 
 
-//Modifies Albums Table to add additional column
+//Modifies Albums Table to add additional column//
 USE music;
 
 ALTER TABLE Albums
@@ -39,7 +39,7 @@ ADD COLUMN duration INT NOT NULL
 
 
 
-// Establishes foreign key contrainsts
+// Establishes foreign key contrainsts //
 
 USE music;
 
